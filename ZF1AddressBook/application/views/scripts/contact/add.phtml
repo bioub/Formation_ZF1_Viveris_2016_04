@@ -1,0 +1,12 @@
+<?php // $this->headLink()->appendStylesheet($this->baseUrl('css/add.css')) ?>
+<?php $this->headScript()->captureStart(); ?>
+/*
+setInterval(function() {
+    document.body.style.background = (document.body.style.background === 'red') ? 'yellow' : 'red';
+}, 500);
+*/
+<?php $this->headScript()->captureEnd(); ?>
+
+<h2>Ajouter un contact</h2>
+
+<?php echo $this->formBootstrap($this->contactForm, 'Ajouter'); ?>

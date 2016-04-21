@@ -1,0 +1,12 @@
+
+<?php echo $this->headTitle('Supprimer un contact'); ?>
+
+<h2>Supprimer un contact</h2>
+
+<form method="post">
+    <p>Confirmer la suppression de <?php echo $this->escape($this->contact->getPrenom()); ?> <?php echo $this->escape($this->contact->getNom()); ?> ?</p>
+    <p>
+        <button type="submit" name="confirm" value="oui" class="btn btn-danger">Oui</button>
+        <button type="submit" name="confirm" value="non" class="btn btn-default">Non</button>
+    </p>
+</form>

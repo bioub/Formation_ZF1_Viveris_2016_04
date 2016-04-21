@@ -1,0 +1,27 @@
+
+<?php $this->headTitle(
+        $this->escape($this->contact->getPrenom()) . 
+        ' ' . 
+        $this->escape($this->contact->getNom())); ?>
+
+<h2>Détails du contact</h2>
+
+<p>
+    Prénom : <?php echo $this->escape($this->contact->getPrenom()); ?>
+</p>
+
+<p>
+    Nom : <?php echo $this->escape($this->contact->getNom()); ?>
+</p>
+
+<?php if ($this->contact->getEmail()) : ?>
+<p>
+    Email : <?php echo $this->escape($this->contact->getEmail()); ?>
+</p>
+<?php endif; ?>
+
+<?php if ($this->contact->getTelephone()) : ?>
+<p>
+    Téléphone : <?php echo $this->escape($this->contact->getTelephone()); ?>
+</p>
+<?php endif; ?>

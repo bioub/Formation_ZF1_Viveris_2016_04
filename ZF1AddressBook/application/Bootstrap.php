@@ -25,4 +25,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $frontController->registerPlugin($debug);
     }
 
+    protected function _initRegistry()
+    {
+        Zend_Registry::set('contactService', new Application_Service_Contact());
+    }
 }

@@ -33,7 +33,8 @@ class ContactController extends Zend_Controller_Action
         /* Initialize action controller here */
         $this->_redirector = $this->_helper->redirector;
         $this->_flashMessenger = $this->_helper->flashMessenger;
-        $this->service = new Application_Service_Contact();
+        //$this->service = new Application_Service_Contact();
+        $this->service = Zend_Registry::get('contactService');
     }
 
     public function indexAction()
